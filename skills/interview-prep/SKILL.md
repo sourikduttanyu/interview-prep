@@ -29,11 +29,19 @@ Wait for the user's reply. Accept plain pasted text. If they type `skip`, note t
 ### Step 3 — Ask for the Resume
 After receiving the JD (or skip), ask:
 
-> "Paste your resume below, or give me the file path to it (or type `skip` to generate generic behavioral questions):"
+> "Share your resume — you can:
+> - **Attach a file directly in this chat** (PDF or DOCX recommended; PNG works but text extraction is less reliable)
+> - **Paste the file path** if it's already on disk (e.g. `/Users/you/resume.pdf`)
+> - **Paste the text** of your resume directly here
+> - Type `skip` to generate generic behavioral questions
+>
+> Note: PDF and DOCX give the best parsing results. PNG/image resumes are read via vision and may miss formatting details."
 
-Wait for the user's reply. Accept:
-- Plain pasted text (resume content)
-- A file path (read it with the Read tool)
+Wait for the user's reply. Handle each case:
+- **File attached in chat** (PDF/DOCX/PNG): Claude receives it as a document/image — read and extract content directly. No tool call needed.
+- **File path provided**: Use the Read tool to read it. Supports `.pdf`, `.docx`, `.txt`, `.md`.
+- **Text pasted**: Use as-is.
+- **PNG/image attached**: Read via vision. Warn the user: "I'll do my best with the image, but PDF or DOCX gives more reliable extraction."
 - `skip` — generate behavioral questions without resume context
 
 ### Step 4 — Confirm and proceed
