@@ -394,6 +394,94 @@ A short checklist for post-interview actions:
 
 ---
 
+#### Resources — Articles & Videos
+
+This section is built from web search results gathered during Phase 1. It must be populated with real, verified URLs only — never fabricate links. If a search returns no usable results for a subcategory, omit that subcategory rather than leaving placeholder links.
+
+Perform these additional searches during Phase 1 research and collect results for this section:
+
+**Interview process articles** — search:
+- `"<Company> software engineer interview experience <current year> site:leetcode.com OR site:glassdoor.com OR site:levels.fyi"`
+- `"<Company> new grad interview process blog"`
+- `"<Company> engineering blog interview"`
+
+**Tech gap articles** — for each item in the "Things to Brush Up On" checklist generated for `CompanyStack.md`, search:
+- `"<technology> explained simply blog article"`
+- `"<technology> crash course tutorial"`
+Prefer official docs, well-known engineering blogs (Cloudflare, Netflix Tech Blog, Meta Engineering, Google Developers, Stripe Blog, AWS Blog), or high-quality tutorials (CSS Tricks, freeCodeCamp, Baeldung, Martin Fowler's blog).
+
+**YouTube videos** — search:
+- `"<Company> interview experience youtube"`
+- `"<technology gap item> tutorial youtube"`
+- `"<P0 DSA topic> explained youtube"`
+Prefer channels: NeetCode, TechLead, Clément Mihailescu (AlgoExpert), Abdul Bari, Back To Back SWE, Kevin Naughton Jr., ByteByteGo (system design), Gaurav Sen (system design).
+
+Format the section as:
+
+```markdown
+---
+
+## Resources
+
+### Interview Process — Articles & Reports
+Real experiences and breakdowns of the <Company> interview pipeline.
+
+| Resource | What It Covers | Link |
+|----------|---------------|------|
+| <Title from search result> | <1-line description> | [Read](<url>) |
+...
+
+*(Only include URLs confirmed via web search. Mark any training-knowledge suggestions with ⚠️ verify link)*
+
+---
+
+### Technology Gap — Articles
+Targeted reading for the gaps identified in `CompanyStack.md`.
+
+#### <Tech Topic 1> *(P0 — brush up before interview)*
+- [<Article title>](<url>) — <one-line description of what it covers>
+- [<Article title>](<url>) — <one-line description>
+
+#### <Tech Topic 2> *(P1)*
+- [<Article title>](<url>) — <one-line description>
+
+---
+
+### YouTube — Top Priority Watches
+
+Ordered by priority. Watch P0 videos before anything else.
+
+#### P0 — Watch Before the Interview
+
+| Topic | Video | Channel | Why Watch |
+|-------|-------|---------|-----------|
+| <DSA/Tech topic> | [<Video title>](<url>) | NeetCode / ByteByteGo / etc. | <one-line reason> |
+...
+
+#### P1 — Watch If You Have Time
+
+| Topic | Video | Channel | Why Watch |
+|-------|-------|---------|-----------|
+...
+
+#### Bonus — <Company>-Specific
+Actual interview experience videos or tech talks from <Company> engineers.
+
+| Title | Channel | Link |
+|-------|---------|------|
+| <Video title> | <Channel name> | [Watch](<url>) |
+...
+```
+
+**Rules for this section:**
+- Only include URLs that were returned by web search in Phase 1. Do not invent URLs.
+- If a YouTube search returns a video title and channel but no direct URL, write the title and channel with a note `(search on YouTube)` instead of a broken link.
+- Mark all links that come from training knowledge (not live search) with ⚠️ so the user knows to verify.
+- Priority order for videos: P0 DSA topics first, then system design topics, then company-specific content, then P1 topics.
+- Cap the list at 15 videos total — curate, don't dump.
+
+---
+
 ## Phase 4: Summary Output
 
 After writing all five files, print a short summary to the user:
