@@ -267,9 +267,136 @@ What to expect: number of rounds, format (phone screen / virtual onsite / OA), t
 
 ---
 
+### File 5: `<CompanyName>/START_HERE.md`
+
+**Title**: `# Interview Prep Master Guide — <Company> (<Role>)`
+
+This is the entry point file. Generate it last, after all four content files exist. It should give the user a complete, opinionated game plan for using the kit.
+
+Include:
+
+#### What's in This Kit
+A one-paragraph overview of the four files and what each one is for. Written in second person ("You have...").
+
+#### How to Use This Kit — Day by Day
+
+A concrete study schedule broken into phases. Tailor the timeline based on how much lead time is typical for this company's process (use what you found in Phase 1 research). Default to a 2-week plan if unknown.
+
+Format:
+
+```
+### Phase 1 — Orient (Day 1)
+**Goal**: Understand the battlefield before you practice.
+
+- [ ] Read `CompanyStack.md` end-to-end — understand what they build, how they interview, what to brush up on
+- [ ] Skim `DSA.md` Topic Priority Matrix — note your P0 weak spots
+- [ ] Read `Behavioral.md` Company Values section — internalize what they care about
+
+**Time estimate**: ~1–2 hours
+
+---
+
+### Phase 2 — DSA Foundation (Days 2–7)
+**Goal**: Get P0 topics solid. Don't move to P1 until P0 feels comfortable.
+
+- [ ] Work through all P0 problems in `DSA.md` (aim for 3–4 problems/day)
+- [ ] For each problem: solve it, check the pattern it belongs to in the Patterns Cheat Sheet, write a one-line note on what made it click
+- [ ] Time yourself — aim for 20–25 min per medium, 10 min per easy
+- [ ] Re-attempt any problem you couldn't solve cleanly without hints
+
+**Time estimate**: ~2–3 hours/day
+
+---
+
+### Phase 3 — Behavioral Prep (Days 3–8, parallel with DSA)
+**Goal**: Have 5–6 polished STAR stories ready that cover all themes.
+
+- [ ] Open `Behavioral.md` → fill in the Story Bank table with your real experiences
+- [ ] Write out each story in full STAR format (bullet points, not paragraphs)
+- [ ] Practice saying each story out loud — aim for 90–120 seconds
+- [ ] Map each story to the questions it can answer in the Core Question Bank
+
+**Time estimate**: 30–45 min/day
+
+---
+
+### Phase 4 — Stack Brush-Up (Days 5–10)
+**Goal**: Be fluent enough in the company's tech to ask and answer questions confidently.
+
+- [ ] Work through the "Things to Brush Up On" checklist in `CompanyStack.md`
+- [ ] For each item: read the docs or a blog post, then write one sentence in your own words explaining it
+- [ ] Review the System Design Focus section — sketch rough architectures for each topic
+
+**Time estimate**: 1–2 hours/day
+
+---
+
+### Phase 5 — Mock & Finalize (Days 9–14)
+**Goal**: Simulate real interview conditions before the actual interview.
+
+- [ ] Do 2–3 timed mock DSA sessions (pick random P0/P1 problems, 45 min each)
+- [ ] Do 1–2 mock behavioral interviews — say your answers out loud to a friend or record yourself
+- [ ] Finalize `FollowUpQuestions.md` — fill in all `[FILL IN]` placeholders
+- [ ] Choose 2–3 questions per interviewer type to actually ask
+- [ ] Re-read `CompanyStack.md` interview process summary the day before
+
+**Time estimate**: 2–3 hours/day
+```
+
+#### File Cross-Reference Map
+
+A table showing which files to use for which interview activity:
+
+| Situation | File to Open |
+|-----------|-------------|
+| Preparing for the OA / coding screen | `DSA.md` |
+| Practicing behavioral answers | `Behavioral.md` |
+| Day before the interview | `CompanyStack.md` + `FollowUpQuestions.md` |
+| During / right before each round | `FollowUpQuestions.md` (pick questions for that interviewer type) |
+| After the interview (debrief) | `Behavioral.md` Story Bank (note what worked) |
+
+#### What to Do If You're Short on Time
+
+A prioritized survival guide for cramming (1–3 days notice):
+
+```
+**48 hours out:**
+1. Read CompanyStack.md fully (1 hr)
+2. Do 5 P0 DSA problems you know well — confidence, not new material (1.5 hr)
+3. Write out 3 strong STAR stories from Behavioral.md (1 hr)
+4. Pick 2 follow-up questions per interviewer type (30 min)
+
+**24 hours out:**
+1. Skim DSA Patterns Cheat Sheet
+2. Say your 3 STAR stories out loud twice
+3. Sleep
+
+**Day of:**
+1. Reread Company Values in Behavioral.md
+2. Open FollowUpQuestions.md — pick your questions for today's rounds
+```
+
+#### Common Mistakes to Avoid
+
+5–7 specific, actionable anti-patterns. Make them company-relevant where possible. Examples:
+- "Jumping to code before clarifying constraints — <Company> interviewers explicitly look for this"
+- "Memorizing story scripts word-for-word — sounds rehearsed, kills authenticity"
+- "Asking no follow-up questions — signals low interest"
+- "Practicing only Easy problems — mediums are the bar"
+
+#### After the Interview
+
+A short checklist for post-interview actions:
+- [ ] Send a thank-you note to the recruiter within 24 hours
+- [ ] Write down every question you were asked (while fresh) — add to this folder as `Interview_Notes.md`
+- [ ] Note what went well and what didn't in your Story Bank
+- [ ] If rejected: ask the recruiter for feedback and note it
+
+---
+
 ## Phase 4: Summary Output
 
-After writing all four files, print a short summary to the user:
+After writing all five files, print a short summary to the user:
 
 ```
 ## Interview Prep Kit Created — <Company> (<Role>)
@@ -278,16 +405,13 @@ Files created in `./<CompanyName>/`:
 
 | File | What's Inside |
 |------|---------------|
+| START_HERE.md | Master guide — day-by-day study plan, cross-reference map, survival guide |
 | DSA.md | Topic priority matrix, 30+ problems, patterns cheat sheet |
-| Behavioral.md | 18 questions with resume hooks, story bank template |
+| Behavioral.md | 15–20 questions with resume hooks, story bank template |
 | FollowUpQuestions.md | 25+ questions organized by interviewer type |
 | CompanyStack.md | Tech stack, system design focus, process summary |
 
-**Suggested next steps:**
-1. Read `CompanyStack.md` first to orient yourself
-2. Fill in the Story Bank table in `Behavioral.md` with your own experiences
-3. Work through DSA problems in priority order (P0 first)
-4. Personalize the `[FILL IN]` sections in `FollowUpQuestions.md`
+**Start with `START_HERE.md`** — it tells you exactly how to use everything else.
 ```
 
 ## Quality Rules
